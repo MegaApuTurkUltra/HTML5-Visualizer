@@ -188,7 +188,7 @@ function createVisualizer() {
 	player.play();
 }
 
-if (!window.AudioContext || !window.webkitAudioContext || !window.File || !window.FileReader || !window.URL) {
+if (!window.File || !window.FileReader || !window.URL || (!window.AudioContext && !window.webkitAudioContext)) {
 	dropTarget.className = "error";
 } else {
 	function fileRead(e){
